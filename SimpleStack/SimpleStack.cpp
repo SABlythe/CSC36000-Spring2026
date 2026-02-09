@@ -12,7 +12,7 @@ SimpleStack::pop()
 }
 
 int
-SimpleStack::top()
+SimpleStack::top() const
 {
   return front();
 }
@@ -21,4 +21,10 @@ void
 SimpleStack::push(int newVal)
 {
   push_front(newVal);
+}
+
+bool
+SimpleStack::isEmpty() const
+{
+  return empty();
 }

@@ -3,15 +3,16 @@
 
 #include <list>
 
-class SimpleStack:public std::list<int>
+class SimpleStack:private std::list<int>
 {
 private:
 
 public:
 
   int pop();
-  int top();
+  int top() const;
   void push(int newVal);
+  bool isEmpty() const;
 };
 
 #endif
